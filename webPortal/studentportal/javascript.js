@@ -1,20 +1,18 @@
-function printIt(x){
-  document.getElementById('writeArea').innerHTML = x;
-}
-function store(){
-  var x;
-  if(document.getElementById("userFile").files.length>0){
-    x = document.getElementById("userFile");
-    console.log(x.value);
-    if(x.value.match(".java")){
-      console.log("This is a java file!");
-      printIt(x.value);
+$(document).ready(function() {
+  $("#submitButton").click(function(){
+    if($('#userFile').val().length > 0)
+    {
+      $(':input[id="userInput"]').val(null);
+      var file = $('userFile').val();
+      var filename = $('input[type=file]').val().replace(/.*(\/|\\)/, '');
+      var length = filename.length;
+      var i = filename.lastIndexOf('.');
+      var exten = filename.substring(i,length);
+      if(!exten.match(".java")){
+        alert("This need to be a java file");
+      }
     }else{
-      window.alert("This has to be a java file!");
+      var text = $('#userInput').val();
     }
-  }else{
-    x = document.getElementById("userInput").value;
-    console.log(x);
-    printIt(x);
-  }
-}
+  });
+});
