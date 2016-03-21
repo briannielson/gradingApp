@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Student Portal</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <script type="text/javascript" src="javascript.js"></script>
+    <script type="text/javascript" src="cookie.js"></script>
+  </head>
+  <body style="background-color:#340019;">
+    <img style="background-color:gold;height:100px;width:100px;" src="https://scontent.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/12728797_1291340177549307_1237618318743091268_n.jpg?oh=38f84d1b1fed0cd111ae7397f152f4d5&oe=575BF411" />
+    <div>
+      <form id=form>
+        <textarea id="userInput" style="margin-left:5px;width:400px;height:400px;" maxlength="300" rows="25" placeholder="Enter your code here"></textarea>
+        <h1 style="color:white;font-size:25px;">Or</h1>
+        <input multiple style="color:black;" type="file" id="userFile" accept=".java" >
+        <input id="submitButton" class="button" type="submit" value="Submit"/>
+      </form>
+  </div>
+  <div>
+    <textarea id="writeArea" style="margin-left:800px;margin-top:-510px;margin-bottom:250px;width:400px;height:400px;" maxlength="300" rows="25" readonly placeholder="Result"></textarea>
+  </div>
+  </body>
+</html>
