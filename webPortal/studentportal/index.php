@@ -11,8 +11,8 @@
   <body style="background-color:#340019;">
     <img style="background-color:gold;height:100px;width:100px;" src="https://scontent.xx.fbcdn.net/hphotos-xft1/v/t1.0-9/12728797_1291340177549307_1237618318743091268_n.jpg?oh=38f84d1b1fed0cd111ae7397f152f4d5&oe=575BF411" />
     <div>
-      <form id=form>
-        <textarea id="userInput" style="margin-left:5px;width:400px;height:400px;" maxlength="300" rows="25" placeholder="Enter your code here"></textarea>
+      <form id="form" name="form" method="post" action="submit.php">
+        <textarea id="userInput" name="filestring" style="margin-left:5px;width:400px;height:400px;" maxlength="300" rows="25" placeholder="Enter your code here"></textarea>
         <h1 style="color:white;font-size:25px;">Or</h1>
         <input multiple style="color:black;" type="file" id="userFile" accept=".java" >
         <input id="submitButton" class="button" type="submit" value="Submit"/>
