@@ -7,9 +7,12 @@
  * from client form to sandbox.
  */
 
-require_once ("DataPush.class");
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
-$dataBox = new DataPush;
+require_once ("../includes/DataPush.class");
+
+$dataBox = new DataPush();
 
 $input = $dataBox->cleanSubmission();
 echo $dataBox->sendToSandbox($input);

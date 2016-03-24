@@ -14,13 +14,13 @@ class DataPush {
 
 	public function cleanSubmission () {
 		$allowedValues = array( 'filestring' );
-		$strToPass = "No string found";
+
 		// Since we only have one input, the foreach is superfluous
 		foreach($allowedValues as $newKey) {
 			// We don't need to clean our input in this case since
 			// we aren't rendering our input, storing in a Database,
 			// or directly changing the backend
-			if (isset($_POST[$newKey]) && $_POST[$newKey] != '')
+			if (!isset($_POST[$newKey]) && $_POST[$newKey] != '')
 				$strToPass = $_POST[$newKey];
 		}
 
@@ -31,7 +31,7 @@ class DataPush {
 	public function sendToSandbox ($str) {
 		// While its local, tell php to push somewhere
 		// eventually, need to write a queue...
-		if (file_put_contents ('/var/sandbox/programtoparse.java', $str))
+		if (file_put_contents ('/var/sandbox/programtoparse.java', $str)
 			return "File stored successfully";
 		else return "There was an error storing the file";
 
