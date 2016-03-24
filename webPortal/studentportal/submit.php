@@ -7,7 +7,7 @@
  * from client form to sandbox.
  */
 
-require_once ("../includes/DataPush.class");
+require_once ("DataPush.class");
 
 $dataBox = new DataPush;
 
